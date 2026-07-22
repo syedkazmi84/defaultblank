@@ -179,7 +179,9 @@
 
 /* mobile chrome + spacing (matches page 767px breakpoint) */
 @media (max-width:767px){
-  #aw-compare > section{ padding:clamp(28px,7vw,40px) clamp(14px,5vw,20px); }
+  /* no own side gutter on mobile: align cards to the page's container padding
+     (the block's wrapper already provides the ~1rem gutter) */
+  #aw-compare > section{ padding:clamp(24px,6vw,36px) 0; }
   /* tabs: even 3-up segmented control, equal height, single-line labels */
   #aw-compare .awc-chrome{ flex-direction:column; align-items:stretch; gap:12px; margin-bottom:20px; }
   #aw-compare .awc-tabs{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
