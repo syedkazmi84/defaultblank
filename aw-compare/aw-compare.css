@@ -179,11 +179,13 @@
 
 /* mobile chrome + spacing (matches page 767px breakpoint) */
 @media (max-width:767px){
-  /* Full-bleed to the viewport, then a single 1rem gutter. This cancels the
-     nested wrapper padding (section + inner wrapper) so the block's cards and
-     tabs align to exactly 1rem from the screen edge like the rest of the page
-     — and gives the tab row its full width so labels stay on one line. */
-  #aw-compare > section{ width:auto; margin-left:calc(50% - 50vw); margin-right:calc(50% - 50vw); padding:clamp(24px,6vw,36px) 1rem; }
+  /* Align to the page gutter. This block sits inside a redundant inner
+     .gbp-section wrapper (ef794fbb) that adds a second side gutter on top of
+     the section's, pushing the cards/tabs further in than every other section.
+     Zero the block's own side padding AND the wrapper's, so cards, tabs and
+     banners line up with the sibling sections (and this block's own intro). */
+  #aw-compare > section{ padding:clamp(24px,6vw,36px) 0; margin-left:0; margin-right:0; }
+  .gb-element-ef794fbb{ padding-left:0; padding-right:0; }
   /* tabs: even 3-up segmented control, equal height, single-line labels */
   #aw-compare .awc-chrome{ flex-direction:column; align-items:stretch; gap:12px; margin-bottom:20px; }
   #aw-compare .awc-tabs{ display:grid; grid-template-columns:repeat(3,1fr); gap:7px; }
