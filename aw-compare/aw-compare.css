@@ -8,7 +8,7 @@
 }
 
 #aw-compare, #aw-compare * { box-sizing:border-box; }
-#aw-compare > .awc-radio { position:absolute; opacity:0; pointer-events:none; width:0; height:0; }
+#aw-compare > .awc-radio { position:fixed; top:0; left:0; opacity:0; pointer-events:none; width:0; height:0; }
 #aw-compare > section { display:block; width:100%; background:var(--awc-bg); padding:clamp(32px,5vw,72px) clamp(16px,4vw,56px); font-family:var(--awc-body-font); color:var(--awc-ink); outline:none; }
 #aw-compare .awc-inner { max-width:1120px; margin:0 auto; }
 #aw-compare .aw-scroll { overflow-x:auto; }
