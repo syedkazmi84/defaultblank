@@ -28,6 +28,7 @@
 #aw-compare .awc-arr { cursor:pointer; width:44px; height:44px; border-radius:50%; font-size:17px; display:flex; align-items:center; justify-content:center; user-select:none; }
 #aw-compare .awc-arr-prev { border:1px solid #D8CEB8; background:#FAF7EF; color:#6B6152; }
 #aw-compare .awc-arr-next { border:1px solid var(--awc-ink); background:var(--awc-ink); color:#EDE6D6; }
+#aw-compare .awc-arr--off { opacity:.3; pointer-events:none; cursor:default; }
 
 /* tab switching (pure CSS) */
 #aw-compare .awc-panel { display:none; }
