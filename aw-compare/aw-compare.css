@@ -115,9 +115,6 @@
 
 /* earnings */
 #aw-compare .awc-hwc { background:#F3EEE1; border:1px solid #E7DFCC; border-radius:12px; padding:18px 24px; margin-bottom:26px; font-size:13px; line-height:1.6; color:#8A7F6C; }
-#aw-compare .awc-ctrls { display:grid; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); gap:clamp(20px,3vw,36px); background:#F3EEE1; border:1px solid #E7DFCC; border-radius:12px; padding:24px 28px; margin-bottom:30px; }
-#aw-compare .awc-clabel { display:flex; justify-content:space-between; font-size:12px; font-weight:700; letter-spacing:.5px; color:#6B6152; margin-bottom:12px; }
-#aw-compare .awc-cval { color:var(--awc-green); }
 #aw-compare .awc-bars { display:flex; flex-direction:column; gap:22px; }
 #aw-compare .awc-brl { display:flex; flex-wrap:wrap; gap:8px; justify-content:space-between; align-items:baseline; margin-bottom:7px; }
 #aw-compare .awc-bn { font-family:var(--awc-heading-font); font-size:clamp(19px,2vw,23px); font-weight:600; color:#8A7F6C; }
@@ -168,11 +165,6 @@
   #aw-compare .awc-card--table { display:none; }
   #aw-compare #awc-t0:checked ~ section .awc-p0 .awc-cards { display:flex; }
 }
-
-/* range sliders */
-#aw-compare input[type=range]{ -webkit-appearance:none; appearance:none; width:100%; height:4px; margin:0; border-radius:2px; background:#D8CEB8; outline:none; }
-#aw-compare input[type=range]::-webkit-slider-thumb{ -webkit-appearance:none; appearance:none; width:22px; height:22px; border-radius:50%; background:var(--awc-green); cursor:pointer; box-shadow:0 1px 4px rgba(0,0,0,.28); border:3px solid #FAF7EF; }
-#aw-compare input[type=range]::-moz-range-thumb{ width:22px; height:22px; border:3px solid #FAF7EF; border-radius:50%; background:var(--awc-green); cursor:pointer; }
 
 @keyframes awGrowBar{ from{transform:scaleX(0);} to{transform:scaleX(1);} }
 #aw-compare .aw-bar{ transform-origin:left center; animation:awGrowBar .7s cubic-bezier(.2,.7,.2,1) both; }
