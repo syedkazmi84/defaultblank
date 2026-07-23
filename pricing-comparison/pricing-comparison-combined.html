@@ -1,0 +1,581 @@
+<!-- ============================================================
+     AuthorWings — Service Comparison (ALL-IN-ONE)
+     Paste this entire block into ONE WordPress "Custom HTML" block.
+     Contains <style> + markup + <script> together.
+     ============================================================ -->
+<style>
+/* ============================================================
+   AuthorWings — Service Comparison (Coaching / Ghostwriting / Editing)
+   Namespaced with .awp- to stay isolated inside WordPress.
+   Brand palette + Inter font to match authorwings.com.
+   ============================================================ */
+
+.awp-compare {
+  --awp-plum:      #7A5278;
+  --awp-plum-dk:   #633f61;
+  --awp-navy:      #1C2439;
+  --awp-navy-dk:   #0f1525;
+  --awp-mauve:     #E4D3E1;
+  --awp-cream:     #ECE4D2;
+  --awp-blue:      #d1e3fa;
+  --awp-blue-dk:   #082346;
+  --awp-red:       #C44536;
+  --awp-ink:       #1C2439;
+  --awp-muted:     #6b6472;
+  --awp-line:      #ecdfe9;
+  --awp-radius:    16px;
+  --awp-shadow:    0 1px 2px rgba(28,36,57,.04), 0 12px 32px -12px rgba(28,36,57,.18);
+
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 8px 20px 40px;
+  color: var(--awp-ink);
+  font-variant-numeric: tabular-nums;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+.awp-compare *, .awp-compare *::before, .awp-compare *::after { box-sizing: border-box; }
+
+/* ---------- Intro ---------- */
+.awp-compare .awp-intro {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 28px;
+}
+.awp-compare .awp-eyebrow {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--awp-plum);
+  margin: 0 0 10px;
+}
+.awp-compare .awp-title {
+  font-size: clamp(22px, 3.4vw, 30px);
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: -.01em;
+  margin: 0 0 10px;
+}
+.awp-compare .awp-sub {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--awp-muted);
+  margin: 0;
+}
+
+/* ---------- Table shell ---------- */
+.awp-compare .awp-table {
+  border-collapse: separate;
+  border-spacing: 0;
+  width: 100%;
+  background: #fff;
+  border: 1px solid var(--awp-line);
+  border-radius: var(--awp-radius);
+  overflow: hidden;
+  table-layout: fixed;
+  box-shadow: var(--awp-shadow);
+}
+.awp-compare .awp-table th,
+.awp-compare .awp-table td {
+  padding: 15px 18px;
+  text-align: left;
+  border-bottom: 1px solid var(--awp-line);
+  font-size: 13.5px;
+  line-height: 1.5;
+  vertical-align: middle;
+  word-wrap: break-word;
+}
+.awp-compare .awp-table tbody tr:last-child td { border-bottom: 0; }
+
+/* ---------- Column headers ---------- */
+.awp-compare .awp-feature-header {
+  background: #fff;
+  width: 24%;
+  vertical-align: bottom;
+  padding: 18px;
+}
+.awp-compare .awp-feature-header .awp-fh-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--awp-muted);
+}
+
+.awp-compare .awp-tier {
+  text-align: center;
+  padding: 22px 14px;
+  width: 25.33%;
+  vertical-align: top;
+  background: var(--awp-cream);
+  border-left: 1px solid var(--awp-line);
+}
+.awp-compare .awp-tier .awp-pill {
+  display: inline-block;
+  background: var(--awp-plum);
+  color: #fff;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  padding: 4px 11px;
+  border-radius: 999px;
+  margin-bottom: 9px;
+}
+.awp-compare .awp-tier .awp-tier-name {
+  font-size: 15px;
+  font-weight: 800;
+  margin: 0 0 5px;
+  letter-spacing: -.01em;
+}
+.awp-compare .awp-tier .awp-tier-price {
+  font-size: 15px;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.25;
+}
+.awp-compare .awp-tier .awp-tier-note {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--awp-muted);
+  margin-top: 4px;
+  letter-spacing: .2px;
+}
+
+/* Featured (Coaching) column */
+.awp-compare .awp-tier.awp-featured {
+  background: var(--awp-navy);
+  color: #fff;
+  box-shadow: inset 0 4px 0 var(--awp-plum);
+}
+.awp-compare .awp-tier.awp-featured .awp-tier-note { color: var(--awp-mauve); }
+
+/* Editing column tint */
+.awp-compare .awp-tier.awp-edit { background: var(--awp-blue); }
+
+/* ---------- Section band rows ---------- */
+.awp-compare .awp-section-row td {
+  background: linear-gradient(90deg, var(--awp-plum), var(--awp-plum-dk));
+  color: #fff;
+  font-weight: 700;
+  font-size: 10.5px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 11px 18px;
+  border-bottom: 0;
+}
+
+/* ---------- Body cells ---------- */
+.awp-compare .awp-feature-name {
+  font-weight: 600;
+  color: var(--awp-ink);
+  width: 24%;
+  background: #faf6fb;
+}
+.awp-compare .awp-cell {
+  text-align: center;
+  width: 25.33%;
+  border-left: 1px solid var(--awp-line);
+}
+.awp-compare .awp-cell.awp-featured { background: rgba(122,82,120,.06); font-weight: 600; }
+.awp-compare .awp-cell.awp-edit     { background: rgba(209,227,250,.30); }
+
+/* zebra on non-highlighted cols */
+.awp-compare .awp-table tbody tr:not(.awp-section-row):nth-of-type(even) .awp-feature-name { background: #f6eff5; }
+
+/* check / cross */
+.awp-compare .awp-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 999px;
+  background: rgba(122,82,120,.14);
+  color: var(--awp-plum);
+  font-size: 12px;
+  font-weight: 800;
+}
+.awp-compare .awp-cross { color: var(--awp-red); font-size: 15px; opacity: .8; }
+
+/* column hover highlight (added by JS) */
+.awp-compare .awp-table.awp-hl-2 tbody td:nth-child(2):not([colspan]),
+.awp-compare .awp-table.awp-hl-3 tbody td:nth-child(3):not([colspan]),
+.awp-compare .awp-table.awp-hl-4 tbody td:nth-child(4):not([colspan]) {
+  box-shadow: inset 0 0 0 2px rgba(122,82,120,.35);
+}
+
+/* ---------- CTA row ---------- */
+.awp-compare .awp-cta-row {
+  display: grid;
+  grid-template-columns: 24% 25.33% 25.33% 25.33%;
+  margin-top: 14px;
+}
+.awp-compare .awp-cta-cell { padding: 0 6px; }
+.awp-compare .awp-cta-cell:first-child { padding: 0; }
+.awp-compare .awp-cta {
+  display: block;
+  width: 100%;
+  padding: 13px 16px;
+  background: var(--awp-plum);
+  color: #fff;
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 13.5px;
+  font-weight: 700;
+  text-align: center;
+  transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
+}
+.awp-compare .awp-cta:hover {
+  background: var(--awp-plum-dk);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -8px rgba(122,82,120,.5);
+}
+.awp-compare .awp-cta.awp-cta-featured { background: var(--awp-navy); }
+.awp-compare .awp-cta.awp-cta-featured:hover { background: var(--awp-navy-dk); }
+
+/* ---------- Footer callout ---------- */
+.awp-compare .awp-footer {
+  margin-top: 26px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 18px 22px;
+  background: var(--awp-mauve);
+  border-radius: 14px;
+  font-size: 13.5px;
+  color: var(--awp-ink);
+  line-height: 1.6;
+}
+.awp-compare .awp-footer .awp-footer-ic {
+  flex: 0 0 auto;
+  width: 38px; height: 38px;
+  display: grid; place-items: center;
+  border-radius: 10px;
+  background: var(--awp-plum);
+  color: #fff;
+  font-size: 20px;
+}
+.awp-compare .awp-footer a { color: var(--awp-plum-dk); text-decoration: underline; font-weight: 700; }
+
+/* ---------- Mobile price strip (hidden on desktop) ---------- */
+.awp-compare .awp-mobile-prices { display: none; }
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+@media (max-width: 780px) {
+  .awp-compare { padding: 4px 12px 28px; }
+
+  .awp-compare .awp-mobile-prices {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .awp-compare .awp-mp-card {
+    text-align: center;
+    padding: 12px 6px;
+    border-radius: 12px;
+    background: var(--awp-cream);
+    border: 1px solid var(--awp-line);
+  }
+  .awp-compare .awp-mp-card.awp-featured { background: var(--awp-navy); color: #fff; border-color: var(--awp-navy); }
+  .awp-compare .awp-mp-card.awp-edit     { background: var(--awp-blue); border-color: var(--awp-blue); }
+  .awp-compare .awp-mp-card .awp-tier-name {
+    font-size: 10.5px; font-weight: 800; letter-spacing: .5px;
+    text-transform: uppercase; margin: 0 0 4px; color: var(--awp-plum);
+  }
+  .awp-compare .awp-mp-card.awp-featured .awp-tier-name { color: var(--awp-mauve); }
+  .awp-compare .awp-mp-card.awp-edit .awp-tier-name { color: var(--awp-blue-dk); }
+  .awp-compare .awp-mp-card .awp-tier-price { font-size: 12.5px; font-weight: 800; margin: 0; }
+
+  .awp-compare .awp-table thead { display: none; }
+  .awp-compare .awp-table,
+  .awp-compare .awp-table tbody,
+  .awp-compare .awp-table tr,
+  .awp-compare .awp-table td { display: block; width: 100%; }
+
+  .awp-compare .awp-table { box-shadow: none; border: 0; overflow: visible; background: transparent; }
+
+  .awp-compare .awp-section-row { margin: 18px 0 10px; border-radius: 10px; overflow: hidden; }
+  .awp-compare .awp-section-row td {
+    text-align: center; letter-spacing: 2.5px; padding: 13px; font-size: 11px;
+  }
+
+  .awp-compare .awp-table tbody tr:not(.awp-section-row) {
+    margin-bottom: 12px;
+    border: 1px solid var(--awp-line);
+    border-radius: 12px;
+    background: #fff;
+    overflow: hidden;
+    box-shadow: 0 6px 18px -14px rgba(28,36,57,.3);
+  }
+  .awp-compare .awp-table .awp-feature-name {
+    background: var(--awp-cream);
+    color: var(--awp-plum);
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    font-weight: 700;
+    padding: 12px 15px;
+    width: 100%;
+  }
+  .awp-compare .awp-table .awp-cell {
+    text-align: left;
+    width: 100%;
+    border-left: 0;
+    border-top: 1px solid var(--awp-line);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    background: #fff !important;
+  }
+  .awp-compare .awp-table .awp-cell::before {
+    content: attr(data-label);
+    font-weight: 700;
+    color: var(--awp-plum);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: .5px;
+    flex: 0 0 auto;
+  }
+
+  .awp-compare .awp-cta-row { grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
+  .awp-compare .awp-cta-cell, .awp-compare .awp-cta-cell:first-child { padding: 0; }
+
+  .awp-compare .awp-footer { flex-direction: column; text-align: center; }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .awp-compare .awp-cta { transition: none; }
+  .awp-compare .awp-reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* Scroll reveal (JS toggles .awp-in) */
+.awp-compare .awp-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.awp-compare .awp-reveal.awp-in { opacity: 1; transform: none; }
+</style>
+
+<!-- ============================================================
+     AuthorWings — Service Comparison Table
+     Paste this into a WordPress "Custom HTML" block.
+     CSS goes in Appearance → Customize → Additional CSS
+     (or an HTML/CSS/JS plugin). JS goes in a footer code block.
+     ============================================================ -->
+<section class="awp-compare" aria-labelledby="awp-compare-title">
+
+  <div class="awp-intro awp-reveal">
+    <span class="awp-eyebrow">Compare Your Options</span>
+    <h2 class="awp-title" id="awp-compare-title">Coaching, ghostwriting, or editing?</h2>
+    <p class="awp-sub">Three ways to finish your book — pick the one that matches where your manuscript is today.</p>
+  </div>
+
+  <!-- Mobile-only price strip -->
+  <div class="awp-mobile-prices" aria-hidden="true">
+    <div class="awp-mp-card awp-featured">
+      <p class="awp-tier-name">Coaching</p>
+      <p class="awp-tier-price">$549&ndash;$2,499</p>
+    </div>
+    <div class="awp-mp-card">
+      <p class="awp-tier-name">Ghostwriting</p>
+      <p class="awp-tier-price">$6,495&ndash;$28,495</p>
+    </div>
+    <div class="awp-mp-card awp-edit">
+      <p class="awp-tier-name">Editing</p>
+      <p class="awp-tier-price">From $299</p>
+    </div>
+  </div>
+
+  <table class="awp-table awp-reveal">
+    <thead>
+      <tr>
+        <th class="awp-feature-header"><span class="awp-fh-label">What you get</span></th>
+        <th class="awp-tier awp-featured" scope="col">
+          <span class="awp-pill">You're Here</span>
+          <p class="awp-tier-name">Book Coaching</p>
+          <p class="awp-tier-price">$549 – $2,499</p>
+          <span class="awp-tier-note">By session count</span>
+        </th>
+        <th class="awp-tier" scope="col">
+          <p class="awp-tier-name">Ghostwriting</p>
+          <p class="awp-tier-price">$6,495 – $28,495</p>
+          <span class="awp-tier-note">Done for you</span>
+        </th>
+        <th class="awp-tier awp-edit" scope="col">
+          <p class="awp-tier-name">Book Editing</p>
+          <p class="awp-tier-price">From $299</p>
+          <span class="awp-tier-note">Polish &amp; refine</span>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Section: Who does the work -->
+      <tr class="awp-section-row"><td colspan="4">Who Does The Work</td></tr>
+      <tr>
+        <td class="awp-feature-name">Who writes the book</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">You</td>
+        <td class="awp-cell" data-label="Ghostwriting">Professional writer</td>
+        <td class="awp-cell awp-edit" data-label="Editing">You</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Level of involvement</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">High</td>
+        <td class="awp-cell" data-label="Ghostwriting">Low</td>
+        <td class="awp-cell awp-edit" data-label="Editing">Medium</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Voice on the page</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">Yours, because you wrote it</td>
+        <td class="awp-cell" data-label="Ghostwriting">Yours, captured by interviews</td>
+        <td class="awp-cell awp-edit" data-label="Editing">Yours, refined</td>
+      </tr>
+
+      <!-- Section: Manuscript stage & fit -->
+      <tr class="awp-section-row"><td colspan="4">Manuscript Stage &amp; Fit</td></tr>
+      <tr>
+        <td class="awp-feature-name">Manuscript stage</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">Idea to first draft</td>
+        <td class="awp-cell" data-label="Ghostwriting">Concept to completed manuscript</td>
+        <td class="awp-cell awp-edit" data-label="Editing">Completed draft to publish-ready</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Best for</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">Authors who want to write the book themselves with structure and feedback</td>
+        <td class="awp-cell" data-label="Ghostwriting">Authors who want a professional to write the book for them</td>
+        <td class="awp-cell awp-edit" data-label="Editing">Authors with a finished manuscript that needs professional refinement</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Core benefit</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">Direction, structure, and accountability</td>
+        <td class="awp-cell" data-label="Ghostwriting">A complete done-for-you manuscript</td>
+        <td class="awp-cell awp-edit" data-label="Editing">A polished publish-ready manuscript</td>
+      </tr>
+
+      <!-- Section: Process & timeline -->
+      <tr class="awp-section-row"><td colspan="4">Process &amp; Timeline</td></tr>
+      <tr>
+        <td class="awp-feature-name">Timeline control</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">Flexible around your schedule</td>
+        <td class="awp-cell" data-label="Ghostwriting">Fully managed by our team</td>
+        <td class="awp-cell awp-edit" data-label="Editing">Depends on manuscript length and edit level</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Typical engagement length</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">4 weeks to 7 months</td>
+        <td class="awp-cell" data-label="Ghostwriting">8 to 36 weeks</td>
+        <td class="awp-cell awp-edit" data-label="Editing">2 to 12 weeks</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Sessions or interviews</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">2 to 10 coaching sessions</td>
+        <td class="awp-cell" data-label="Ghostwriting">8 to 80 hours of voice interviews</td>
+        <td class="awp-cell awp-edit" data-label="Editing"><span class="awp-cross" aria-label="Not included">✗</span></td>
+      </tr>
+
+      <!-- Section: Rights & protection -->
+      <tr class="awp-section-row"><td colspan="4">Rights &amp; Protection</td></tr>
+      <tr>
+        <td class="awp-feature-name">Ownership</td>
+        <td class="awp-cell awp-featured" data-label="Coaching">100% yours</td>
+        <td class="awp-cell" data-label="Ghostwriting">100% yours</td>
+        <td class="awp-cell awp-edit" data-label="Editing">100% yours</td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">Mutual NDA</td>
+        <td class="awp-cell awp-featured" data-label="Coaching"><span class="awp-check" aria-label="Included">✓</span></td>
+        <td class="awp-cell" data-label="Ghostwriting"><span class="awp-check" aria-label="Included">✓</span></td>
+        <td class="awp-cell awp-edit" data-label="Editing"><span class="awp-check" aria-label="Included">✓</span></td>
+      </tr>
+      <tr>
+        <td class="awp-feature-name">100% royalty retention</td>
+        <td class="awp-cell awp-featured" data-label="Coaching"><span class="awp-check" aria-label="Included">✓</span></td>
+        <td class="awp-cell" data-label="Ghostwriting"><span class="awp-check" aria-label="Included">✓</span></td>
+        <td class="awp-cell awp-edit" data-label="Editing"><span class="awp-check" aria-label="Included">✓</span></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- CTA row aligned to columns -->
+  <div class="awp-cta-row awp-reveal">
+    <div class="awp-cta-cell"></div>
+    <div class="awp-cta-cell"><a href="https://authorwings.com/book-coaching/#cta" class="awp-cta awp-cta-featured">Choose Coaching</a></div>
+    <div class="awp-cta-cell"><a href="https://authorwings.com/ghostwriting/" class="awp-cta">See Ghostwriting</a></div>
+    <div class="awp-cta-cell"><a href="https://authorwings.com/book-editing/" class="awp-cta">See Editing</a></div>
+  </div>
+
+  <div class="awp-footer awp-reveal">
+    <span class="awp-footer-ic" aria-hidden="true">🧮</span>
+    <p style="margin:0;">
+      Not sure which one fits where you are in the manuscript?
+      <a href="/book-cost-calculator/" target="_blank" rel="noopener">Run the cost calculator</a>
+      for a budget estimate across coaching,
+      <a href="https://authorwings.com/ghostwriting/">ghostwriting</a>, and
+      <a href="https://authorwings.com/book-editing/">editing</a>.
+    </p>
+  </div>
+
+</section>
+
+<script>
+/* ============================================================
+   AuthorWings — Service Comparison enhancements
+   Progressive enhancement only: the table is fully usable
+   without this script. Safe to load in the footer.
+   ============================================================ */
+(function () {
+  "use strict";
+
+  function init() {
+    var root = document.querySelector(".awp-compare");
+    if (!root || root.dataset.awpReady === "1") return;
+    root.dataset.awpReady = "1";
+
+    var table = root.querySelector(".awp-table");
+
+    /* 1) Column cross-highlight on hover (desktop pointer only) ---- */
+    if (table && window.matchMedia && window.matchMedia("(hover: hover)").matches) {
+      table.addEventListener("mouseover", function (e) {
+        var cell = e.target.closest("td, th");
+        if (!cell || cell.hasAttribute("colspan")) return;
+        var idx = cell.cellIndex + 1;           // 1-based
+        if (idx < 2) return;                    // skip feature-name column
+        table.classList.remove("awp-hl-2", "awp-hl-3", "awp-hl-4");
+        table.classList.add("awp-hl-" + idx);
+      });
+      table.addEventListener("mouseleave", function () {
+        table.classList.remove("awp-hl-2", "awp-hl-3", "awp-hl-4");
+      });
+    }
+
+    /* 2) Scroll reveal for the intro / table / CTAs --------------- */
+    var reveals = root.querySelectorAll(".awp-reveal");
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    if (reduce || !("IntersectionObserver" in window)) {
+      reveals.forEach(function (el) { el.classList.add("awp-in"); });
+    } else {
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("awp-in");
+            io.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+      reveals.forEach(function (el) { io.observe(el); });
+    }
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
+  } else {
+    init();
+  }
+})();
+</script>
