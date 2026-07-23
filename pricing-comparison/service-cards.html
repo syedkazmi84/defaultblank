@@ -1,0 +1,193 @@
+<!-- ============================================================
+     AuthorWings — Service Cards (Coaching / Ghostwriting / Editing)
+     ALL-IN-ONE. Paste into a single WordPress "Custom HTML" block.
+     Hardcoded colors (no CSS variables). Visible without JS.
+     ============================================================ -->
+<style>
+.aw-svc { font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  max-width:1140px; margin:0 auto; padding:8px 20px 40px; color:#1C2439; -webkit-font-smoothing:antialiased; box-sizing:border-box; }
+.aw-svc *, .aw-svc *::before, .aw-svc *::after { box-sizing:border-box; }
+
+/* Intro */
+.aw-svc .aw-intro { text-align:center; max-width:660px; margin:0 auto 34px; }
+.aw-svc .aw-eyebrow { display:inline-block; font-size:11px; font-weight:700; letter-spacing:2px; text-transform:uppercase; color:#7A5278; margin:0 0 12px; }
+.aw-svc .aw-title { font-size:clamp(24px,3.6vw,34px); line-height:1.15; font-weight:800; letter-spacing:-.02em; margin:0 0 12px; color:#1C2439; }
+.aw-svc .aw-sub { font-size:15.5px; line-height:1.65; color:#6b6472; margin:0; }
+
+/* Card grid */
+.aw-svc .aw-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; align-items:stretch; }
+
+/* Card */
+.aw-svc .aw-card { position:relative; display:flex; flex-direction:column; background:#fff; border:1px solid #ecdfe9;
+  border-radius:20px; padding:26px 24px 24px; box-shadow:0 1px 2px rgba(28,36,57,.04), 0 18px 40px -22px rgba(28,36,57,.22); }
+.aw-svc .aw-card.aw-edit { background:#f4f8fe; border-color:#d7e6fb; }
+
+/* Featured card */
+.aw-svc .aw-card.aw-featured { background:#1C2439; border-color:#1C2439; color:#fff; transform:translateY(-10px);
+  box-shadow:0 30px 60px -24px rgba(28,36,57,.55); }
+.aw-svc .aw-card.aw-featured .aw-c-note,
+.aw-svc .aw-card.aw-featured .aw-tagline { color:#c9b7c6; }
+.aw-svc .aw-card.aw-featured .aw-spec-row { border-color:rgba(255,255,255,.12); }
+.aw-svc .aw-card.aw-featured .aw-spec-k { color:#b9a7b7; }
+.aw-svc .aw-card.aw-featured .aw-spec-v { color:#fff; }
+
+/* Ribbon */
+.aw-svc .aw-ribbon { position:absolute; top:18px; right:18px; background:#7A5278; color:#fff; font-size:9.5px;
+  font-weight:800; letter-spacing:1.5px; text-transform:uppercase; padding:5px 12px; border-radius:999px; }
+
+/* Card head */
+.aw-svc .aw-c-name { font-size:13px; font-weight:800; letter-spacing:1px; text-transform:uppercase; color:#7A5278; margin:0 0 12px; }
+.aw-svc .aw-card.aw-featured .aw-c-name { color:#E4D3E1; }
+.aw-svc .aw-card.aw-edit .aw-c-name { color:#1f4e91; }
+.aw-svc .aw-c-price { font-size:26px; font-weight:800; letter-spacing:-.02em; margin:0; line-height:1.1; color:inherit; }
+.aw-svc .aw-c-note { font-size:12.5px; font-weight:600; color:#8a8391; margin:6px 0 0; }
+
+.aw-svc .aw-tagline { font-size:13.5px; line-height:1.55; color:#54506a; margin:16px 0 20px; padding-bottom:20px; border-bottom:1px solid #ecdfe9; }
+.aw-svc .aw-card.aw-featured .aw-tagline { border-color:rgba(255,255,255,.14); }
+.aw-svc .aw-card.aw-edit .aw-tagline { border-color:#d7e6fb; }
+
+/* Spec list */
+.aw-svc .aw-specs { list-style:none; margin:0 0 22px; padding:0; }
+.aw-svc .aw-spec-row { display:flex; justify-content:space-between; align-items:baseline; gap:14px; padding:9px 0; border-bottom:1px solid #f0e7ef; }
+.aw-svc .aw-card.aw-edit .aw-spec-row { border-bottom-color:#e4eefb; }
+.aw-svc .aw-spec-row:last-child { border-bottom:0; }
+.aw-svc .aw-spec-k { flex:0 0 auto; font-size:11.5px; font-weight:600; letter-spacing:.3px; text-transform:uppercase; color:#948da0; }
+.aw-svc .aw-spec-v { text-align:right; font-size:13.5px; font-weight:600; line-height:1.4; color:#1C2439; }
+
+/* Core benefit pill */
+.aw-svc .aw-benefit { margin:0 0 22px; padding:13px 15px; border-radius:12px; background:#f6eff5; font-size:13px; line-height:1.5; color:#4a3f49; }
+.aw-svc .aw-benefit strong { color:#7A5278; font-weight:800; }
+.aw-svc .aw-card.aw-featured .aw-benefit { background:rgba(122,82,120,.28); color:#f3e9f1; }
+.aw-svc .aw-card.aw-featured .aw-benefit strong { color:#fff; }
+.aw-svc .aw-card.aw-edit .aw-benefit { background:#e6f0fd; color:#274d80; }
+.aw-svc .aw-card.aw-edit .aw-benefit strong { color:#1f4e91; }
+
+/* CTA */
+.aw-svc .aw-cta { margin-top:auto; display:block; text-align:center; text-decoration:none; padding:13px 18px; border-radius:12px;
+  font-size:14px; font-weight:700; background:#fff; color:#7A5278; border:1.5px solid #7A5278;
+  transition:transform .15s ease, background .2s ease, box-shadow .2s ease, color .2s ease; }
+.aw-svc .aw-cta:hover { background:#7A5278; color:#fff; transform:translateY(-2px); box-shadow:0 12px 22px -10px rgba(122,82,120,.55); }
+.aw-svc .aw-card.aw-featured .aw-cta { background:#7A5278; color:#fff; border-color:#7A5278; }
+.aw-svc .aw-card.aw-featured .aw-cta:hover { background:#8d5f8a; box-shadow:0 12px 26px -8px rgba(122,82,120,.7); }
+.aw-svc .aw-card.aw-edit .aw-cta { color:#1f4e91; border-color:#1f4e91; }
+.aw-svc .aw-card.aw-edit .aw-cta:hover { background:#1f4e91; color:#fff; box-shadow:0 12px 22px -10px rgba(31,78,145,.5); }
+
+/* Shared "included" strip */
+.aw-svc .aw-included { display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:10px 26px;
+  margin-top:26px; padding:18px 22px; background:#E4D3E1; border-radius:16px; }
+.aw-svc .aw-included .aw-inc-label { font-size:11px; font-weight:800; letter-spacing:1.5px; text-transform:uppercase; color:#633f61; }
+.aw-svc .aw-inc-item { display:inline-flex; align-items:center; gap:8px; font-size:13.5px; font-weight:600; color:#3d2f3c; }
+.aw-svc .aw-inc-item .aw-tick { display:inline-flex; align-items:center; justify-content:center; width:20px; height:20px;
+  border-radius:999px; background:#7A5278; color:#fff; font-size:11px; font-weight:800; }
+
+/* Footer calculator callout */
+.aw-svc .aw-foot { display:flex; align-items:center; gap:14px; margin-top:18px; padding:18px 22px;
+  background:#fbf7fb; border:1px solid #ecdfe9; border-radius:16px; font-size:13.5px; line-height:1.6; color:#1C2439; }
+.aw-svc .aw-foot-ic { flex:0 0 auto; width:40px; height:40px; display:grid; place-items:center; border-radius:11px; background:#7A5278; color:#fff; font-size:21px; }
+.aw-svc .aw-foot a { color:#633f61; font-weight:700; text-decoration:underline; }
+
+/* Mobile */
+@media (max-width:900px) {
+  .aw-svc .aw-grid { grid-template-columns:1fr; gap:16px; }
+  .aw-svc .aw-card.aw-featured { transform:none; order:-1; }
+  .aw-svc .aw-foot { flex-direction:column; text-align:center; }
+}
+
+/* Scroll reveal — only active when JS runs (adds .aw-js), so content shows without JS */
+.aw-svc.aw-js .aw-reveal { opacity:0; transform:translateY(16px); transition:opacity .55s ease, transform .55s ease; }
+.aw-svc.aw-js .aw-reveal.aw-in { opacity:1; transform:none; }
+.aw-svc.aw-js .aw-card.aw-featured.aw-reveal.aw-in { transform:translateY(-10px); }
+@media (max-width:900px){ .aw-svc.aw-js .aw-card.aw-featured.aw-reveal.aw-in { transform:none; } }
+@media (prefers-reduced-motion:reduce){ .aw-svc.aw-js .aw-reveal { opacity:1 !important; transform:none !important; } }
+</style>
+
+<section class="aw-svc" aria-labelledby="aw-svc-title">
+
+  <div class="aw-intro aw-reveal">
+    <span class="aw-eyebrow">Three Ways To Finish Your Book</span>
+    <h2 class="aw-title" id="aw-svc-title">Coaching, ghostwriting, or editing?</h2>
+    <p class="aw-sub">Pick the path that matches where your manuscript is today — from a first idea to a finished draft.</p>
+  </div>
+
+  <div class="aw-grid">
+
+    <!-- FEATURED: Coaching -->
+    <article class="aw-card aw-featured aw-reveal">
+      <span class="aw-ribbon">You're Here</span>
+      <p class="aw-c-name">Book Coaching</p>
+      <p class="aw-c-price">$549 – $2,499</p>
+      <p class="aw-c-note">Priced by session count</p>
+      <p class="aw-tagline">For authors who want to write the book themselves, with structure, feedback, and accountability.</p>
+      <ul class="aw-specs">
+        <li class="aw-spec-row"><span class="aw-spec-k">Who writes it</span><span class="aw-spec-v">You</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Your involvement</span><span class="aw-spec-v">High</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Voice</span><span class="aw-spec-v">Yours, because you wrote it</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Starts from</span><span class="aw-spec-v">Idea to first draft</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Timeline</span><span class="aw-spec-v">4 weeks – 7 months</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Format</span><span class="aw-spec-v">2 – 10 coaching sessions</span></li>
+      </ul>
+      <p class="aw-benefit">You walk away with <strong>direction, structure, and accountability</strong> — and a draft in your own words.</p>
+      <a class="aw-cta" href="https://authorwings.com/book-coaching/#cta">Choose Coaching</a>
+    </article>
+
+    <!-- Ghostwriting -->
+    <article class="aw-card aw-reveal">
+      <p class="aw-c-name">Ghostwriting</p>
+      <p class="aw-c-price">$6,495 – $28,495</p>
+      <p class="aw-c-note">Fully done for you</p>
+      <p class="aw-tagline">For authors who want a professional to write the entire book for them, start to finish.</p>
+      <ul class="aw-specs">
+        <li class="aw-spec-row"><span class="aw-spec-k">Who writes it</span><span class="aw-spec-v">Professional writer</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Your involvement</span><span class="aw-spec-v">Low</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Voice</span><span class="aw-spec-v">Yours, captured by interviews</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Starts from</span><span class="aw-spec-v">Concept to completed manuscript</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Timeline</span><span class="aw-spec-v">8 – 36 weeks</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Format</span><span class="aw-spec-v">8 – 80 hrs of voice interviews</span></li>
+      </ul>
+      <p class="aw-benefit">You walk away with <strong>a complete, done-for-you manuscript</strong> in your voice.</p>
+      <a class="aw-cta" href="https://authorwings.com/ghostwriting/">See Ghostwriting</a>
+    </article>
+
+    <!-- Editing -->
+    <article class="aw-card aw-edit aw-reveal">
+      <p class="aw-c-name">Book Editing</p>
+      <p class="aw-c-price">From $299</p>
+      <p class="aw-c-note">Polish &amp; refine</p>
+      <p class="aw-tagline">For authors with a finished manuscript that needs professional refinement before publishing.</p>
+      <ul class="aw-specs">
+        <li class="aw-spec-row"><span class="aw-spec-k">Who writes it</span><span class="aw-spec-v">You</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Your involvement</span><span class="aw-spec-v">Medium</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Voice</span><span class="aw-spec-v">Yours, refined</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Starts from</span><span class="aw-spec-v">Completed draft to publish-ready</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Timeline</span><span class="aw-spec-v">2 – 12 weeks</span></li>
+        <li class="aw-spec-row"><span class="aw-spec-k">Format</span><span class="aw-spec-v">Editorial passes, no interviews</span></li>
+      </ul>
+      <p class="aw-benefit">You walk away with <strong>a polished, publish-ready manuscript</strong>.</p>
+      <a class="aw-cta" href="https://authorwings.com/book-editing/">See Editing</a>
+    </article>
+
+  </div>
+
+  <!-- Shared inclusions -->
+  <div class="aw-included aw-reveal">
+    <span class="aw-inc-label">Every service includes</span>
+    <span class="aw-inc-item"><span class="aw-tick">✓</span> Mutual NDA</span>
+    <span class="aw-inc-item"><span class="aw-tick">✓</span> 100% ownership</span>
+    <span class="aw-inc-item"><span class="aw-tick">✓</span> 100% royalty retention</span>
+  </div>
+
+  <!-- Calculator callout -->
+  <div class="aw-foot aw-reveal">
+    <span class="aw-foot-ic" aria-hidden="true">🧮</span>
+    <p style="margin:0;">Not sure which one fits where you are in the manuscript?
+      <a href="/book-cost-calculator/" target="_blank" rel="noopener">Run the cost calculator</a>
+      for a budget estimate across coaching,
+      <a href="https://authorwings.com/ghostwriting/">ghostwriting</a>, and
+      <a href="https://authorwings.com/book-editing/">editing</a>.</p>
+  </div>
+
+</section>
+
+<script>
+(function(){"use strict";function init(){var root=document.querySelector(".aw-svc");if(!root||root.dataset.awReady==="1")return;root.dataset.awReady="1";root.classList.add("aw-js");var reveals=root.querySelectorAll(".aw-reveal");var reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;if(reduce||!("IntersectionObserver" in window)){reveals.forEach(function(el){el.classList.add("aw-in");});return;}var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add("aw-in");io.unobserve(e.target);}});},{threshold:0.12,rootMargin:"0px 0px -40px 0px"});reveals.forEach(function(el){io.observe(el);});}if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",init);else init();})();
+</script>

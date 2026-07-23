@@ -1,36 +1,22 @@
 <!-- ============================================================
-     AuthorWings — Service Comparison (ALL-IN-ONE)
+     AuthorWings - Service Comparison (ALL-IN-ONE)
      Paste this entire block into ONE WordPress "Custom HTML" block.
-     Contains <style> + markup + <script> together.
+     Colors are hardcoded (no CSS variables) for max compatibility.
      ============================================================ -->
 <style>
 /* ============================================================
    AuthorWings — Service Comparison (Coaching / Ghostwriting / Editing)
    Namespaced with .awp- to stay isolated inside WordPress.
-   Brand palette + Inter font to match authorwings.com.
+   Colors are hardcoded (NO CSS variables) because some
+   WordPress/GeneratePress setups strip inline custom properties.
    ============================================================ */
 
 .awp-compare {
-  --awp-plum:      #7A5278;
-  --awp-plum-dk:   #633f61;
-  --awp-navy:      #1C2439;
-  --awp-navy-dk:   #0f1525;
-  --awp-mauve:     #E4D3E1;
-  --awp-cream:     #ECE4D2;
-  --awp-blue:      #d1e3fa;
-  --awp-blue-dk:   #082346;
-  --awp-red:       #C44536;
-  --awp-ink:       #1C2439;
-  --awp-muted:     #6b6472;
-  --awp-line:      #ecdfe9;
-  --awp-radius:    16px;
-  --awp-shadow:    0 1px 2px rgba(28,36,57,.04), 0 12px 32px -12px rgba(28,36,57,.18);
-
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   max-width: 1120px;
   margin: 0 auto;
   padding: 8px 20px 40px;
-  color: var(--awp-ink);
+  color: #1C2439;
   font-variant-numeric: tabular-nums;
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
@@ -38,168 +24,80 @@
 .awp-compare *, .awp-compare *::before, .awp-compare *::after { box-sizing: border-box; }
 
 /* ---------- Intro ---------- */
-.awp-compare .awp-intro {
-  text-align: center;
-  max-width: 640px;
-  margin: 0 auto 28px;
-}
+.awp-compare .awp-intro { text-align: center; max-width: 640px; margin: 0 auto 28px; }
 .awp-compare .awp-eyebrow {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: var(--awp-plum);
-  margin: 0 0 10px;
+  display: inline-block; font-size: 11px; font-weight: 700; letter-spacing: 2px;
+  text-transform: uppercase; color: #7A5278; margin: 0 0 10px;
 }
 .awp-compare .awp-title {
-  font-size: clamp(22px, 3.4vw, 30px);
-  line-height: 1.2;
-  font-weight: 800;
-  letter-spacing: -.01em;
-  margin: 0 0 10px;
+  font-size: clamp(22px, 3.4vw, 30px); line-height: 1.2; font-weight: 800;
+  letter-spacing: -.01em; margin: 0 0 10px; color: #1C2439;
 }
-.awp-compare .awp-sub {
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--awp-muted);
-  margin: 0;
-}
+.awp-compare .awp-sub { font-size: 15px; line-height: 1.6; color: #6b6472; margin: 0; }
 
 /* ---------- Table shell ---------- */
 .awp-compare .awp-table {
-  border-collapse: separate;
-  border-spacing: 0;
-  width: 100%;
-  background: #fff;
-  border: 1px solid var(--awp-line);
-  border-radius: var(--awp-radius);
-  overflow: hidden;
-  table-layout: fixed;
-  box-shadow: var(--awp-shadow);
+  border-collapse: separate; border-spacing: 0; width: 100%;
+  background: #fff; border: 1px solid #ecdfe9; border-radius: 16px;
+  overflow: hidden; table-layout: fixed;
+  box-shadow: 0 1px 2px rgba(28,36,57,.04), 0 12px 32px -12px rgba(28,36,57,.18);
 }
 .awp-compare .awp-table th,
 .awp-compare .awp-table td {
-  padding: 15px 18px;
-  text-align: left;
-  border-bottom: 1px solid var(--awp-line);
-  font-size: 13.5px;
-  line-height: 1.5;
-  vertical-align: middle;
-  word-wrap: break-word;
+  padding: 15px 18px; text-align: left; border-bottom: 1px solid #ecdfe9;
+  font-size: 13.5px; line-height: 1.5; vertical-align: middle; word-wrap: break-word;
 }
 .awp-compare .awp-table tbody tr:last-child td { border-bottom: 0; }
 
 /* ---------- Column headers ---------- */
-.awp-compare .awp-feature-header {
-  background: #fff;
-  width: 24%;
-  vertical-align: bottom;
-  padding: 18px;
-}
+.awp-compare .awp-feature-header { background: #fff; width: 24%; vertical-align: bottom; padding: 18px; }
 .awp-compare .awp-feature-header .awp-fh-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  color: var(--awp-muted);
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #6b6472;
 }
 
 .awp-compare .awp-tier {
-  text-align: center;
-  padding: 22px 14px;
-  width: 25.33%;
-  vertical-align: top;
-  background: var(--awp-cream);
-  border-left: 1px solid var(--awp-line);
+  text-align: center; padding: 22px 14px; width: 25.33%; vertical-align: top;
+  background: #ECE4D2; border-left: 1px solid #ecdfe9;
 }
 .awp-compare .awp-tier .awp-pill {
-  display: inline-block;
-  background: var(--awp-plum);
-  color: #fff;
-  font-size: 9px;
-  font-weight: 800;
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-  padding: 4px 11px;
-  border-radius: 999px;
-  margin-bottom: 9px;
+  display: inline-block; background: #7A5278; color: #fff; font-size: 9px; font-weight: 800;
+  letter-spacing: 1.5px; text-transform: uppercase; padding: 4px 11px; border-radius: 999px; margin-bottom: 9px;
 }
-.awp-compare .awp-tier .awp-tier-name {
-  font-size: 15px;
-  font-weight: 800;
-  margin: 0 0 5px;
-  letter-spacing: -.01em;
-}
-.awp-compare .awp-tier .awp-tier-price {
-  font-size: 15px;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.25;
-}
-.awp-compare .awp-tier .awp-tier-note {
-  display: block;
-  font-size: 11px;
-  font-weight: 600;
-  color: var(--awp-muted);
-  margin-top: 4px;
-  letter-spacing: .2px;
-}
+.awp-compare .awp-tier .awp-tier-name { font-size: 15px; font-weight: 800; margin: 0 0 5px; letter-spacing: -.01em; color: inherit; }
+.awp-compare .awp-tier .awp-tier-price { font-size: 15px; font-weight: 700; margin: 0; line-height: 1.25; color: inherit; }
+.awp-compare .awp-tier .awp-tier-note { display: block; font-size: 11px; font-weight: 600; color: #6b6472; margin-top: 4px; letter-spacing: .2px; }
 
 /* Featured (Coaching) column */
-.awp-compare .awp-tier.awp-featured {
-  background: var(--awp-navy);
-  color: #fff;
-  box-shadow: inset 0 4px 0 var(--awp-plum);
-}
-.awp-compare .awp-tier.awp-featured .awp-tier-note { color: var(--awp-mauve); }
+.awp-compare .awp-tier.awp-featured { background: #1C2439; color: #fff; box-shadow: inset 0 4px 0 #7A5278; }
+.awp-compare .awp-tier.awp-featured .awp-tier-name,
+.awp-compare .awp-tier.awp-featured .awp-tier-price { color: #fff; }
+.awp-compare .awp-tier.awp-featured .awp-tier-note { color: #E4D3E1; }
 
 /* Editing column tint */
-.awp-compare .awp-tier.awp-edit { background: var(--awp-blue); }
+.awp-compare .awp-tier.awp-edit { background: #d1e3fa; }
 
 /* ---------- Section band rows ---------- */
 .awp-compare .awp-section-row td {
-  background: linear-gradient(90deg, var(--awp-plum), var(--awp-plum-dk));
-  color: #fff;
-  font-weight: 700;
-  font-size: 10.5px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 11px 18px;
-  border-bottom: 0;
+  background: #7A5278;
+  background: linear-gradient(90deg, #7A5278, #633f61);
+  color: #fff; font-weight: 700; font-size: 10.5px; text-transform: uppercase;
+  letter-spacing: 2px; padding: 11px 18px; border-bottom: 0;
 }
 
 /* ---------- Body cells ---------- */
-.awp-compare .awp-feature-name {
-  font-weight: 600;
-  color: var(--awp-ink);
-  width: 24%;
-  background: #faf6fb;
-}
-.awp-compare .awp-cell {
-  text-align: center;
-  width: 25.33%;
-  border-left: 1px solid var(--awp-line);
-}
+.awp-compare .awp-feature-name { font-weight: 600; color: #1C2439; width: 24%; background: #faf6fb; }
+.awp-compare .awp-cell { text-align: center; width: 25.33%; border-left: 1px solid #ecdfe9; color: #1C2439; }
 .awp-compare .awp-cell.awp-featured { background: rgba(122,82,120,.06); font-weight: 600; }
-.awp-compare .awp-cell.awp-edit     { background: rgba(209,227,250,.30); }
-
-/* zebra on non-highlighted cols */
+.awp-compare .awp-cell.awp-edit { background: rgba(209,227,250,.30); }
 .awp-compare .awp-table tbody tr:not(.awp-section-row):nth-of-type(even) .awp-feature-name { background: #f6eff5; }
 
 /* check / cross */
 .awp-compare .awp-check {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 22px; height: 22px;
-  border-radius: 999px;
-  background: rgba(122,82,120,.14);
-  color: var(--awp-plum);
-  font-size: 12px;
-  font-weight: 800;
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 999px;
+  background: rgba(122,82,120,.14); color: #7A5278; font-size: 12px; font-weight: 800;
 }
-.awp-compare .awp-cross { color: var(--awp-red); font-size: 15px; opacity: .8; }
+.awp-compare .awp-cross { color: #C44536; font-size: 15px; opacity: .8; }
 
 /* column hover highlight (added by JS) */
 .awp-compare .awp-table.awp-hl-2 tbody td:nth-child(2):not([colspan]),
@@ -209,57 +107,28 @@
 }
 
 /* ---------- CTA row ---------- */
-.awp-compare .awp-cta-row {
-  display: grid;
-  grid-template-columns: 24% 25.33% 25.33% 25.33%;
-  margin-top: 14px;
-}
+.awp-compare .awp-cta-row { display: grid; grid-template-columns: 24% 25.33% 25.33% 25.33%; margin-top: 14px; }
 .awp-compare .awp-cta-cell { padding: 0 6px; }
 .awp-compare .awp-cta-cell:first-child { padding: 0; }
 .awp-compare .awp-cta {
-  display: block;
-  width: 100%;
-  padding: 13px 16px;
-  background: var(--awp-plum);
-  color: #fff;
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 13.5px;
-  font-weight: 700;
-  text-align: center;
+  display: block; width: 100%; padding: 13px 16px; background: #7A5278; color: #fff;
+  text-decoration: none; border-radius: 10px; font-size: 13.5px; font-weight: 700; text-align: center;
   transition: transform .15s ease, background .2s ease, box-shadow .2s ease;
 }
-.awp-compare .awp-cta:hover {
-  background: var(--awp-plum-dk);
-  transform: translateY(-2px);
-  box-shadow: 0 10px 20px -8px rgba(122,82,120,.5);
-}
-.awp-compare .awp-cta.awp-cta-featured { background: var(--awp-navy); }
-.awp-compare .awp-cta.awp-cta-featured:hover { background: var(--awp-navy-dk); }
+.awp-compare .awp-cta:hover { background: #633f61; transform: translateY(-2px); box-shadow: 0 10px 20px -8px rgba(122,82,120,.5); }
+.awp-compare .awp-cta.awp-cta-featured { background: #1C2439; }
+.awp-compare .awp-cta.awp-cta-featured:hover { background: #0f1525; }
 
 /* ---------- Footer callout ---------- */
 .awp-compare .awp-footer {
-  margin-top: 26px;
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 18px 22px;
-  background: var(--awp-mauve);
-  border-radius: 14px;
-  font-size: 13.5px;
-  color: var(--awp-ink);
-  line-height: 1.6;
+  margin-top: 26px; display: flex; align-items: center; gap: 14px; padding: 18px 22px;
+  background: #E4D3E1; border-radius: 14px; font-size: 13.5px; color: #1C2439; line-height: 1.6;
 }
 .awp-compare .awp-footer .awp-footer-ic {
-  flex: 0 0 auto;
-  width: 38px; height: 38px;
-  display: grid; place-items: center;
-  border-radius: 10px;
-  background: var(--awp-plum);
-  color: #fff;
-  font-size: 20px;
+  flex: 0 0 auto; width: 38px; height: 38px; display: grid; place-items: center;
+  border-radius: 10px; background: #7A5278; color: #fff; font-size: 20px;
 }
-.awp-compare .awp-footer a { color: var(--awp-plum-dk); text-decoration: underline; font-weight: 700; }
+.awp-compare .awp-footer a { color: #633f61; text-decoration: underline; font-weight: 700; }
 
 /* ---------- Mobile price strip (hidden on desktop) ---------- */
 .awp-compare .awp-mobile-prices { display: none; }
@@ -270,84 +139,45 @@
 @media (max-width: 780px) {
   .awp-compare { padding: 4px 12px 28px; }
 
-  .awp-compare .awp-mobile-prices {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 8px;
-    margin-bottom: 18px;
-  }
-  .awp-compare .awp-mp-card {
-    text-align: center;
-    padding: 12px 6px;
-    border-radius: 12px;
-    background: var(--awp-cream);
-    border: 1px solid var(--awp-line);
-  }
-  .awp-compare .awp-mp-card.awp-featured { background: var(--awp-navy); color: #fff; border-color: var(--awp-navy); }
-  .awp-compare .awp-mp-card.awp-edit     { background: var(--awp-blue); border-color: var(--awp-blue); }
-  .awp-compare .awp-mp-card .awp-tier-name {
-    font-size: 10.5px; font-weight: 800; letter-spacing: .5px;
-    text-transform: uppercase; margin: 0 0 4px; color: var(--awp-plum);
-  }
-  .awp-compare .awp-mp-card.awp-featured .awp-tier-name { color: var(--awp-mauve); }
-  .awp-compare .awp-mp-card.awp-edit .awp-tier-name { color: var(--awp-blue-dk); }
-  .awp-compare .awp-mp-card .awp-tier-price { font-size: 12.5px; font-weight: 800; margin: 0; }
+  .awp-compare .awp-mobile-prices { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 8px; margin-bottom: 18px; }
+  .awp-compare .awp-mp-card { text-align: center; padding: 12px 6px; border-radius: 12px; background: #ECE4D2; border: 1px solid #ecdfe9; }
+  .awp-compare .awp-mp-card.awp-featured { background: #1C2439; color: #fff; border-color: #1C2439; }
+  .awp-compare .awp-mp-card.awp-edit { background: #d1e3fa; border-color: #d1e3fa; }
+  .awp-compare .awp-mp-card .awp-tier-name { font-size: 10.5px; font-weight: 800; letter-spacing: .5px; text-transform: uppercase; margin: 0 0 4px; color: #7A5278; }
+  .awp-compare .awp-mp-card.awp-featured .awp-tier-name { color: #E4D3E1; }
+  .awp-compare .awp-mp-card.awp-edit .awp-tier-name { color: #082346; }
+  .awp-compare .awp-mp-card .awp-tier-price { font-size: 12.5px; font-weight: 800; margin: 0; color: inherit; }
+  .awp-compare .awp-mp-card.awp-featured .awp-tier-price { color: #fff; }
 
   .awp-compare .awp-table thead { display: none; }
   .awp-compare .awp-table,
   .awp-compare .awp-table tbody,
   .awp-compare .awp-table tr,
   .awp-compare .awp-table td { display: block; width: 100%; }
-
   .awp-compare .awp-table { box-shadow: none; border: 0; overflow: visible; background: transparent; }
 
   .awp-compare .awp-section-row { margin: 18px 0 10px; border-radius: 10px; overflow: hidden; }
-  .awp-compare .awp-section-row td {
-    text-align: center; letter-spacing: 2.5px; padding: 13px; font-size: 11px;
-  }
+  .awp-compare .awp-section-row td { text-align: center; letter-spacing: 2.5px; padding: 13px; font-size: 11px; }
 
   .awp-compare .awp-table tbody tr:not(.awp-section-row) {
-    margin-bottom: 12px;
-    border: 1px solid var(--awp-line);
-    border-radius: 12px;
-    background: #fff;
-    overflow: hidden;
-    box-shadow: 0 6px 18px -14px rgba(28,36,57,.3);
+    margin-bottom: 12px; border: 1px solid #ecdfe9; border-radius: 12px; background: #fff;
+    overflow: hidden; box-shadow: 0 6px 18px -14px rgba(28,36,57,.3);
   }
   .awp-compare .awp-table .awp-feature-name {
-    background: var(--awp-cream);
-    color: var(--awp-plum);
-    text-transform: uppercase;
-    font-size: 11px;
-    letter-spacing: 1px;
-    font-weight: 700;
-    padding: 12px 15px;
-    width: 100%;
+    background: #ECE4D2; color: #7A5278; text-transform: uppercase; font-size: 11px;
+    letter-spacing: 1px; font-weight: 700; padding: 12px 15px; width: 100%;
   }
   .awp-compare .awp-table .awp-cell {
-    text-align: left;
-    width: 100%;
-    border-left: 0;
-    border-top: 1px solid var(--awp-line);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    background: #fff !important;
+    text-align: left; width: 100%; border-left: 0; border-top: 1px solid #ecdfe9;
+    display: flex; justify-content: space-between; align-items: center; gap: 12px; background: #fff !important;
   }
   .awp-compare .awp-table .awp-cell::before {
-    content: attr(data-label);
-    font-weight: 700;
-    color: var(--awp-plum);
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: .5px;
-    flex: 0 0 auto;
+    content: attr(data-label); font-weight: 700; color: #7A5278; font-size: 11px;
+    text-transform: uppercase; letter-spacing: .5px; flex: 0 0 auto;
   }
 
   .awp-compare .awp-cta-row { grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
   .awp-compare .awp-cta-cell, .awp-compare .awp-cta-cell:first-child { padding: 0; }
-
   .awp-compare .awp-footer { flex-direction: column; text-align: center; }
 }
 
@@ -357,9 +187,8 @@
   .awp-compare.awp-js .awp-reveal { opacity: 1 !important; transform: none !important; }
 }
 
-/* Scroll reveal — only hide when JS is active (.awp-js added by the script).
-   Without JS the content stays fully visible, so it never disappears
-   if a plugin strips the <script> on the front end. */
+/* Scroll reveal — only hide when JS is active (.awp-js added by the script),
+   so content stays fully visible if a plugin strips the <script>. */
 .awp-compare.awp-js .awp-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
 .awp-compare.awp-js .awp-reveal.awp-in { opacity: 1; transform: none; }
 </style>
