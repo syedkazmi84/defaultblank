@@ -348,9 +348,11 @@
 /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .awp-compare .awp-cta { transition: none; }
-  .awp-compare .awp-reveal { opacity: 1 !important; transform: none !important; }
+  .awp-compare.awp-js .awp-reveal { opacity: 1 !important; transform: none !important; }
 }
 
-/* Scroll reveal (JS toggles .awp-in) */
-.awp-compare .awp-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
-.awp-compare .awp-reveal.awp-in { opacity: 1; transform: none; }
+/* Scroll reveal — only hide when JS is active (.awp-js added by the script).
+   Without JS the content stays fully visible, so it never disappears
+   if a plugin strips the <script> on the front end. */
+.awp-compare.awp-js .awp-reveal { opacity: 0; transform: translateY(14px); transition: opacity .5s ease, transform .5s ease; }
+.awp-compare.awp-js .awp-reveal.awp-in { opacity: 1; transform: none; }

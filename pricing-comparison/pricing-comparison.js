@@ -11,6 +11,9 @@
     if (!root || root.dataset.awpReady === "1") return;
     root.dataset.awpReady = "1";
 
+    // Marks that JS is live; only then does the reveal animation hide content.
+    root.classList.add("awp-js");
+
     var table = root.querySelector(".awp-table");
 
     /* 1) Column cross-highlight on hover (desktop pointer only) ---- */
